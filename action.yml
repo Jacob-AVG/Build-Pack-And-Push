@@ -54,9 +54,9 @@ runs:
     env:
       NUGET_AUTH_TOKEN: ${{ inputs.Password }}
       
-  - name: Add nuget.org
-    shell: bash
-    run: dotnet nuget add source "https://api.nuget.org/v3/index.json"
+#  - name: Add nuget.org
+#    shell: bash
+#    run: dotnet nuget add source "https://api.nuget.org/v3/index.json"
 
 #  - name: Add Github Source
 #    shell: bash
