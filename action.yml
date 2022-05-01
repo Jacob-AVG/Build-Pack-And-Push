@@ -75,12 +75,12 @@ runs:
     with:
       wildcard: '*.nupkg'
 
-  - name: Put To Nuget - from path input
-    if: inputs.PathToPackage != 'unknown'
-    run: dotnet nuget push "${{ inputs.PathToPackage }}" --api-key ${{ inputs.NugetTkn }} --source "github"
-    shell: bash
+#  - name: Put To Nuget - from path input
+#    if: inputs.PathToPackage != 'unknown'
+#    run: dotnet nuget push "${{ inputs.PathToPackage }}" --api-key ${{ inputs.NugetTkn }} --source "github"
+#    shell: bash
 
-  - name: Put To Nuget - from found nupkg
-    if: inputs.PathToPackage == 'unknown'
-    run: dotnet nuget push "${{ steps.Find-nupkg.outputs.found }}" --api-key ${{ inputs.NugetTkn }} --source "github"
-    shell: bash
+#  - name: Put To Nuget - from found nupkg
+#    if: inputs.PathToPackage == 'unknown'
+#    run: dotnet nuget push "${{ steps.Find-nupkg.outputs.found }}" --api-key ${{ inputs.NugetTkn }} --source "github"
+#    shell: bash
