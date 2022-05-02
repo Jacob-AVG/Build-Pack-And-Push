@@ -38,6 +38,8 @@ inputs:
 #    value: "${{ steps.RepoName.outputs._1 }}"
 
 runs:
+  env:
+    avgNugetRepoKey: ${{ inputs.Password }}
   using: "composite"
 
   steps:
