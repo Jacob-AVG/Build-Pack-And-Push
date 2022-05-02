@@ -38,8 +38,6 @@ inputs:
 #    value: "${{ steps.RepoName.outputs._1 }}"
 
 runs:
-  env:
-    avgNugetRepoKey: ${{ inputs.Password }}
   using: "composite"
 
   steps:
@@ -49,6 +47,8 @@ runs:
     uses: NuGet/setup-nuget@v1.0.5
     
   - name: Setup .NET
+    env:
+      avgNugetRepoKey: ${{ inputs.Password }}
     uses: actions/setup-dotnet@v2
     with:
       dotnet-version: 5.0.x
